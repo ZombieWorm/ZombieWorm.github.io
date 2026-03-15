@@ -5,7 +5,7 @@ title: "Welcome"
 
 # 👋 Hi, welcome to my page!
 
-I use this space to showcase my projects, experiments, and technical work across:
+I use this space to showcase projects, experiments, and technical work across:
 
 - AI model deployment and quantization  
 - Local LM workflows and GPU optimisation  
@@ -17,20 +17,17 @@ I use this space to showcase my projects, experiments, and technical work across
 
 ## 🔧 Recent Work
 
-- Setting up a clean version‑switching workflow for **llama.cpp** using symlinks  
+- Setting up version‑switching workflow for local LLM's 
 - Benchmarking CUDA builds on consumer GPUs  
-- Building structured, newspaper‑style HTML layouts  
-- Experimenting with Jekyll remote themes for GitHub Pages  
-
+- Building stuff
 ---
 
 ## 🧠 What I’m exploring next
 
-- Customising my page  
-- Publishing technical guides and troubleshooting notes  
+- Customising page for content  
+- Organising technical guides and troubleshooting notes  
 - Creating a portfolio of AI‑related tools and scripts  
 
 ---
 
-If you're curious about any of my work, feel free to explore my repositories or reach out on GitHub.
-quasintalg@gmail.com
+Feel free to explore my GitHub. Contact: quasintalg@gmail.com
