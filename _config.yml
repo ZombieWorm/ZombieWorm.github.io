@@ -1,0 +1,26 @@
+title: "ZombieWorm"
+description: "Personal tech portfolio, experiments, and projects by Gareth."
+url: "https://ZombieWorm.github.io"
+
+# Use your forked theme
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: ZombieWorm/jekyll-remote-theme
+
+# Optional but recommended
+markdown: kramdown
+highlighter: rouge
+
+# Navigation (your theme may use this)
+nav:
+  - name: "Home"
+    link: "/"
+  - name: "Projects"
+    link: "/projects"
+  - name: "About"
+    link: "/about"
+
+# Social links (add more if you want)
+social:
+  github: "ZombieWorm"
