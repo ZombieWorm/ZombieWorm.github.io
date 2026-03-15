@@ -3,13 +3,12 @@ layout: default
 title: "Welcome"
 ---
 
-# 👋 Hi, I'm Gareth — also known as **ZombieWorm**
+# 👋 Hi, welcome to my page!
 
-Welcome to my GitHub Pages site.  
 I use this space to showcase my projects, experiments, and technical work across:
 
 - AI model deployment and quantization  
-- llama.cpp workflows and GPU optimisation  
+- Local LM workflows and GPU optimisation  
 - Python tooling and automation  
 - Home lab experiments  
 - Workflow visualisation and documentation  
@@ -27,10 +26,11 @@ I use this space to showcase my projects, experiments, and technical work across
 
 ## 🧠 What I’m exploring next
 
-- Customising my Jekyll theme  
+- Customising my page  
 - Publishing technical guides and troubleshooting notes  
 - Creating a portfolio of AI‑related tools and scripts  
 
 ---
 
 If you're curious about any of my work, feel free to explore my repositories or reach out on GitHub.
+quasintalg@gmail.com
