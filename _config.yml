@@ -28,6 +28,8 @@ nav:
     link: "/"
   - name: "Projects"
     link: "/projects"
+  - name: "Benchmarks"
+    link: "/benchmarks"
   - name: "About"
     link: "/about"
 
