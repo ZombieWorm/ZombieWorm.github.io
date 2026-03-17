@@ -9,6 +9,15 @@ plugins:
 
 remote_theme: ZombieWorm/jekyll-remote-theme
 
+# collections
+collections:
+  benchmarks:
+    output: true
+    permalink: /benchmarks/:name/
+
+# Optional: help debug by showing drafts etc.
+show_drafts: false
+
 # Optional but recommended
 markdown: kramdown
 highlighter: rouge
