@@ -4,12 +4,9 @@ title: "RTX 5080 Usage"
 date: 2026-03-15
 category: benchmarks
 ---
-
 # Quantization Benchmark: AWQ on RTX 5080
-
 **Metrics**: tokens/sec, VRAM usage, quality degradation  
 **Setup**: Llama.cpp | **Prompt**: Various models tested
-
 ## Results
 __________________
 QWEN3.5
@@ -30,9 +27,6 @@ VRAM usage| 99% max
 from| nvidia
 type| 4B GGUF
 ___________________
-
 ### Key Findings
 - **2x speed increase** with 4-bit quantization
 - **52% VRAM reduction** (from 84GB to 38GB)
-
-**Coming Soon**: GPTQ, bitsandbytes comparisons across different models...
