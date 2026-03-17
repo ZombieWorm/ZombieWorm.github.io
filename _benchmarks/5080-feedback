@@ -12,10 +12,14 @@ category: benchmarks
 
 ## Results
 
-| Method     | VRAM (GB) | Tokens/s | Quality Impact | Details                |
-|------------|-----------|----------|----------------|------------------------|
-| FP16       | ~84       | 18.2     | Baseline       | Full precision         |
-| AWQ-4bit   | ~38       | 41.7     | Minor (-5%)    | 52% VRAM savings       |
+{: .table-benchmark }
+
+| Method     | VRAM (GB) | Tokens/s | Quality Impact       | Details                |
+|------------|-----------|----------|----------------------|------------------------|
+| FP16       | ~84       | 18.2     | Baseline             | Full precision         |
+| AWQ-4bit   | ~38       | <span class="highlight-good">41.7</span>    | Minor (-5%)          | **52% VRAM savings**   |
+
+<small>*Full data and reproduction scripts available in the [GitHub repository](https://github.com/ZombieWorm/benchmarks)*
 
 ### Key Findings
 - **2x speed increase** with 4-bit quantization

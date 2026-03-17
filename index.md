@@ -35,6 +35,5 @@ Benchmarking CUDA builds on consumer GPUs, building custom tools.
 [Explore Projects →](/projects.html)
 
 ---
-
 **Email**: [quasintalg@gmail.com](mailto:quasintalg@gmail.com)  
 **GitHub**: [@ZombieWorm](https://github.com/ZombieWorm)

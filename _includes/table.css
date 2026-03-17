@@ -1,0 +1,46 @@
+/* Custom table styles */
+table.benchmark-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-family: 'Courier New', monospace;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+table.benchmark-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+table.benchmark-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+table.benchmark-table tr:last-child td {
+    border-bottom: none;
+}
+
+table.benchmark-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table.benchmark-table tbody tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.2s ease;
+}
+
+/* Highlight important metrics */
+.highlight-good {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.highlight-bad {
+    color: #dc3545;
+    font-weight: bold;
+}
