@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Benchmarks
+permalink: /benchmarks/
 ---
 
 # Benchmarks & Experiments
