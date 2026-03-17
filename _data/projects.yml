@@ -1,0 +1,23 @@
+local-llm-pipeline:
+  title: Local LLM Deployment Pipeline
+  description: End-to-end setup for running quantized models (Llama 3, Mistral, Phi-3 etc.) with Ollama + Open WebUI + API layers.
+  image: /assets/img/llm-dashboard.png          # put real images in assets/img/
+  url: https://github.com/ZombieWorm/local-llm-pipeline   # or your actual repo/link
+
+python-tooling:
+  title: Python Automation & Tooling Suite
+  description: Scripts for model conversion (gguf), VRAM monitoring, benchmark automation, workflow orchestration.
+  image: /assets/img/python-tools.png
+  url: https://github.com/ZombieWorm/tooling-suite
+
+home-lab-dashboard:
+  title: Home-Lab Monitoring Dashboard
+  description: Grafana + Prometheus tuned for GPU usage, power, temp, inference latency across nodes.
+  image: /assets/img/grafana-dashboard.png
+  url: https://github.com/ZombieWorm/home-lab-monitor
+
+quant-experiments:
+  title: Quantization & Optimization Experiments
+  description: AWQ / GPTQ / bitsandbytes benchmarks vs FP16 on RTX 4090-class cards — quality vs speed trade-offs.
+  image: /assets/img/quant-comparison.png
+  url: https://github.com/ZombieWorm/quant-benchmarks

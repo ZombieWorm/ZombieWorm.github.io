@@ -1,39 +1,24 @@
-```html
-{% raw %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Projects – ZombieWorm</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
-</head>
-<body>
-  <header>
-    <a href="{{ site.url }}"><i class="fas fa-home"></i> ZombieWorm</a>
-    <nav>
-      <a href="{{ site.url }}/index.html">Home</a>
-      <a href="{{ site.url }}/projects.html">Projects</a>
-      <a href="{{ site.url }}/about.html">About</a>
-      <a href="{{ site.url }}/contact.html">Contact</a>
-    </nav>
-  </header>
+---
+layout: default
+title: Projects
+---
 
-  <section class="projects">
-    <h2>Portfolio</h2>
-    <div class="grid">
-      {% include project-card.html %}
-      {% include project-card.html %}
-      {% include project-card.html %}
-      {% include project-card.html %}
-    </div>
-  </section>
+# Projects
 
-  <footer>
-    <p>© {{ site.current_year }} ZombieWorm. <a href="mailto:you@example.com">you@example.com</a></p>
-    {% include footer.html %}
-  </footer>
-</body>
-</html>
-{% endraw %}
-```
+A selection of my hands-on work in AI deployment, local LLMs, Python tooling, and home-lab experiments.
+
+{% include project-card.html 
+  project=site.data.projects.local-llm-pipeline 
+%}
+
+{% include project-card.html 
+  project=site.data.projects.python-tooling 
+%}
+
+{% include project-card.html 
+  project=site.data.projects.home-lab-dashboard 
+%}
+
+{% include project-card.html 
+  project=site.data.projects.quant-experiments 
+%}
