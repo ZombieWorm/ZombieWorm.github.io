@@ -1,0 +1,31 @@
+---
+title:       "Model performance on RTX 5080"
+date:        2026-03-17
+image:       /assets/imgages/zmb_benchmark.png
+tags:        [llm, quantization, rtx-5080, benchmark]
+hardware:    RTX 5080 16 GB
+model:       See page info
+---
+
+# Quantization Benchmark: AWQ on RTX 5080
+
+Measured tokens/sec, VRAM usage and quality degradation for models used.
+
+## Setup
+- Llamacpp
+- Prompt: various
+
+## Results
+
+This is placeholder - will update better table:
+
+| Quant     | VRAM (GB) | Tok/s | Quality drop |
+|-----------|-----------|-------|--------------|
+| FP16      |  ~84      | 18.2  | Baseline     |
+| AWQ-4bit  |  ~38      | 41.7  | Minor        |
+
+![Benchmark chart]({{ page.image | relative_url }})
+
+Full logs & script → [GitHub repo](https://github.com/ZombieWorm/benchmarks)
+
+More coming: GPTQ, bitsandbytes, different models...
