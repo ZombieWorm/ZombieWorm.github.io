@@ -19,7 +19,7 @@ collections:
 show_drafts: false
 
 # Optional but recommended
-markdown: kramdown
+markdown: GFM
 highlighter: rouge
 
 # Navigation (your theme may use this)
