@@ -1,6 +1,7 @@
-title: "ZombieWorm"
-description: "Personal tech portfolio, experiments, and projects by Gareth."
-url: "https://ZombieWorm.github.io"
+title: ZombieWorm
+description: AI deployment, local LLMs, Python tooling & home-lab experiments
+baseurl: ""
+url: "https://zombieworm.github.io"
 
 # Use your forked theme
 plugins:
