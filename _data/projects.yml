@@ -16,8 +16,8 @@ home-lab-dashboard:
   image: /assets/img/grafana-dashboard.png
   url: https://github.com/ZombieWorm/home-lab-monitor
 
-quant-experiments:
-  title: Quantization & Optimization Experiments
-  description: AWQ / GPTQ / bitsandbytes benchmarks vs FP16 on RTX 4090-class cards — quality vs speed trade-offs.
-  image: /assets/img/quant-comparison.png
-  url: https://github.com/ZombieWorm/quant-benchmarks
+Local-llm-experiments:
+  title: LLM Model Experiments
+  description: Benchmarks or real use measurements on RTX 5080.
+  image: /assets/img/zmb_benchmark.png
+  url: https://github.com/ZombieWorm/benchmarks
