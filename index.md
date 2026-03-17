@@ -1,33 +1,40 @@
 ---
-layout: default
-title: Welcome
+layout: default  # Optional: if you have a custom layout in _layouts/
+title: "ZombieWorm | Developer Portfolio"
+description: "Developer passionate about AI model deployment, local LLM workflows, and GPU optimization"
 ---
 
-# 👋 Hi, welcome to my page!
+# Zombie<span>Worm</span>
 
-I use this space to showcase projects, experiments, and technical work across:
+> Developer passionate about AI model deployment, local LLM workflows, 
+> GPU optimization, Python tooling, and home lab experiments.
 
-- AI model deployment and quantization  
-- Local LM workflows and GPU optimisation  
-- Python tooling and automation  
-- Home lab experiments  
-- Workflow visualisation and documentation  
+## Quick Links
+
+- **[View Projects](#projects)** - Explore my work
+- **[Contact Me](mailto:quasintalg@gmail.com)** - Get in touch
+
+## Expertise Areas
+
+{: .text-center }
+
+* 🤖 **AI/ML** - Model deployment & quantization
+* ⚙️ **GPU Optimization** - Local LM workflows & CUDA builds
+* 🐍 **Python** - Tooling and automation scripts
+* 🏠 **Home Lab** - Experiments and infrastructure
+* 📊 **Automation** - Workflow visualization and documentation
+
+<!-- Projects section would typically be linked from here -->
+<a id="projects"></a>
+
+## Recent Work
+
+### Setting up version-switching workflow for local LLMs
+Benchmarking CUDA builds on consumer GPUs, building custom tools.
+
+[Explore Projects →](/projects.html)
 
 ---
 
-## 🔧 Recent Work
-
-- Setting up version‑switching workflow for local LLM's 
-- Benchmarking CUDA builds on consumer GPUs  
-- Building stuff
----
-
-## 🧠 What I’m exploring next
-
-- Customising page for content  
-- Organising technical guides and troubleshooting notes  
-- Creating a portfolio of AI‑related tools and scripts  
-
----
-
-Feel free to explore my GitHub. Contact: quasintalg@gmail.com
+**Email**: [quasintalg@gmail.com](mailto:quasintalg@gmail.com)  
+**GitHub**: [@ZombieWorm](https://github.com/ZombieWorm)
