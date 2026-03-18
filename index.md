@@ -10,11 +10,6 @@ permalink: /
 > 🤖 **AI/ML Engineer** | ⚙️ **GPU Optimization** | 🐍 **Python Tooling**  
 > Helping you deploy local LLMs efficiently on consumer hardware
 
-<div style="margin: 3rem 0; padding-top: 2rem;">
-    <a href="/projects.html" class="primary-link" style="display:inline-block; padding:1rem 2rem; background:#667eea;color:white;text-decoration:none;border-radius:50px;font-weight:bold;margin-right:1rem;">View Projects</a>
-    <a href="mailto:quasintalg@gmail.com" class="secondary-link" style="display:inline-block; padding:1rem 2rem; background:#fff;color:#667eea;text-decoration:none;border-radius:50px;font-weight:bold;border:2px solid #667eea;">Contact Me</a>
-</div>
-
 ## 🚀 Expertise Areas
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;">
@@ -28,9 +23,6 @@ permalink: /
 ## 🔬 Recent Work
 
 - **Version-switching workflow** for local LLMs | [See benchmarks](/benchmarks/)
-- **CUDA build optimization** on consumer GPUs | [Read more](https://github.com/ZombieWorm/benchmarks)
-- **Custom AI tools** and scripts | [GitHub](https://github.com/ZombieWorm)
-
 ---
 
 <div style="margin-top:3rem;text-align:center;padding-top:2rem;border-top:1px solid #eee;">
