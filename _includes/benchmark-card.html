@@ -1,0 +1,13 @@
+<div class="benchmark-section" style="margin: 2rem 0;">
+    <h3>{{ include.title | default: "Benchmark Results" }}</h3>
+    
+    <a href="{{ site.baseurl }}/{{ include.slug | default: '5080-feedback' }}/" 
+       class="btn benchmark-btn" 
+       style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white !important; text-decoration: none; border-radius: 8px; font-weight: bold;">
+        {{ include.title | default: "View Benchmarks" }} →
+    </a>
+    
+    <div class="project-card" style="margin-top: 1.5rem; background: #f9f9f9; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        {{ include.content | default: "Detailed benchmark results and analysis will be displayed here." }}
+    </div>
+</div>

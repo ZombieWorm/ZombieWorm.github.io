@@ -6,20 +6,8 @@ permalink: /benchmarks/
 
 # GPU Performance Benchmarks
 
-## RTX 5080 Usage
+{% include benchmark-card.html title="RTX 5080 Usage" slug="5080-feedback" content="<p>Benchmark results showing AWQ quantization performance on RTX 5080 with VRAM usage and token throughput metrics.</p><ul><li>FP16: 18.2 tokens/s, ~84GB VRAM</li><li>AWQ-4bit: 41.7 tokens/s, ~38GB VRAM (52% savings)</li></ul>" %}
 
-{% include benchmark-link.html title="RTX 5080 Benchmark Results" %}
+{% include benchmark-card.html title="RTX 4090 Usage" slug="4090-feedback" content="<p>Benchmark results for RTX 4090 testing...</p>" %}
 
-<div class="project-card">
-    <!-- Your card content -->
-    <h3>AWQ Quantization on RTX 5080</h3>
-    <p>Quantization results and performance metrics...</p>
-</div>
 
-## RTX 4090 Usage
-
-{% include benchmark-link.html title="RTX 4090 Benchmark Results" %}
-
-<div class="project-card">
-    <!-- Content -->
-</div>
