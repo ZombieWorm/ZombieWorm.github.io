@@ -4,23 +4,22 @@ title: Benchmarks
 permalink: /benchmarks/
 ---
 
-# Benchmarks & Experiments
+# GPU Performance Benchmarks
 
-Real-world measurements from my local LLM & GPU setups.
+## RTX 5080 Usage
 
-<h1>Benchmarks</h1>
+{% include benchmark-link.html title="RTX 5080 Benchmark Results" %}
 
-<ul>
-  {% for item in site.benchmarks %}
-    <li>
-      <strong>{{ item.title }}</strong><br>
-      <a class="btn" href="{{ item.url }}">View</a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="project-card">
+    <!-- Your card content -->
+    <h3>AWQ Quantization on RTX 5080</h3>
+    <p>Quantization results and performance metrics...</p>
+</div>
 
-<div class="grid">
-  {% for item in site.benchmarks reversed %}
-    {% include project-card.html project=item %}   <!-- reuse your existing card, or make benchmark-card.html -->
-  {% endfor %}
+## RTX 4090 Usage
+
+{% include benchmark-link.html title="RTX 4090 Benchmark Results" %}
+
+<div class="project-card">
+    <!-- Content -->
 </div>
