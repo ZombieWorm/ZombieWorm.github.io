@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "ZWbank",
+      "description": "Cryptocurrency miner with test, track, and monitor capabilities",
+      "status": "Public",
+      "tech_stack": ["JavaScript", "Event tracking"],
+      "github_url": "https://github.com/ZombieWorm/SRBMiner-Multi",
+      "demo_url": null,
+      "tags": ["mining", "javascript"]
+    },
+    {
+      "title": "Speedy",
+      "description": "Internet speed testing tool with detailed metrics analysis",
+      "status": "Public",
+      "tech_stack": ["JavaScript"],
+      "github_url": "https://github.com/ZombieWorm/speedy",
+      "demo_url": null,
+      "tags": ["networking", "testing"]
+    },
+    {
+      "title": "Local LLM Benchmark Suite",
+      "description": "Comprehensive benchmarking for AI models on consumer GPUs (RTX 5080, 4090)",
+      "status": "Active",
+      "tech_stack": ["Python", "Llama.cpp", "CUDA"],
+      "github_url": "https://github.com/ZombieWorm/benchmarks",
+      "demo_url": "/benchmarks/",
+      "tags": ["ai", "gpu", "benchmarking"]
+    },
+    {
+      "title": "HTML Notebook & CSS Portfolio",
+      "description": "Demo showcase for web development experiments and portfolio ideas",
+      "status": "Work in Progress",
+      "tech_stack": ["HTML", "CSS"],
+      "github_url": "https://github.com/ZombieWorm/ZombieWorm.github.io",
+      "demo_url": "/",
+      "tags": ["web-dev", "portfolio"]
+    }
+  ]
+}
