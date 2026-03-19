@@ -1,79 +1,303 @@
----
-layout: default
-title: Projects
-description: Collection of hands-on projects in AI, GPU optimization, and automation
-permalink: /projects/
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects • ZombieWorm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #0a0a15;
+      --text: #e0e0ff;
+      --accent: #00d4ff;
+      --card: #16162a;
+      --border: rgba(0, 212, 255, 0.12);
+    }
 
-# My Projects
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<div style="max-width:1200px;margin:0 auto;">
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 5vw;
+    }
 
-### 🧪 ZWbank - Cryptocurrency Miners Manager
-**Status:** Public | **Forked from:** stefanwalther/speedy  
-[View on GitHub](https://github.com/ZombieWorm/SRBMiner-Multi)  
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-<div style="background:#f8f9fa;padding:1rem;border-radius:8px;margin-top:1rem;">
-    <p><strong>What it does:</strong> CPU & AMD GPU cryptocurrency miner with test, track, and monitor capabilities.</p>
-    <p><strong>Tech Stack:</strong> JavaScript, Event tracking</p>
-</div>
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
 
----
+    .subtitle {
+      color: #a0a0d0;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-### ⚡ Speedy - Internet Speed Testing Tool  
-**Status:** Public | **Forked from:** stefanwalther/speedy  
-[View on GitHub](https://github.com/ZombieWorm/speedy)  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-<div style="background:#f8f9fa;padding:1rem;border-radius:8px;margin-top:1rem;">
-    <p><strong>What it does:</strong> Test, track, monitor and analyze your internet speed with detailed metrics.</p>
-    <p><strong>Tech Stack:</strong> JavaScript</p>
-</div>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem;
+      margin: 2.5rem 0;
+    }
 
----
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem;
+      transition: all 0.25s ease;
+    }
 
-### 🧠 Local LLM Benchmark Suite  
-**Status:** Active | **Repo:** [benchmarks](https://github.com/ZombieWorm/benchmarks)  
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 212, 255, 0.4);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
 
-<div style="background:#f8f9fa;padding:1rem;border-radius:8px;margin-top:1rem;">
-    <p><strong>What it does:</strong> Comprehensive benchmarking for AI models on consumer GPUs (RTX 5080, 4090, etc.)</p>
-    <p><strong>Tech Stack:</strong> Python, Llama.cpp, CUDA</p>
-    <p><a href="/benchmarks/" class="cta-btn" style="display:inline-block;padding:0.7rem 1.5rem;background:#667eea;color:white;text-decoration:none;border-radius:8px;margin-top:1rem;">View Benchmarks →</a></p>
-</div>
+    .project-title {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
----
+    .status {
+      font-size: 0.9rem;
+      color: #88ffaa;
+      margin-left: auto;
+      background: rgba(136, 255, 170, 0.12);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+    }
 
-### 📝 HTML Notebook & CSS Portfolio  
-**Status:** Work in Progress  
+    .project-meta {
+      font-size: 0.95rem;
+      color: #9090c0;
+      margin-bottom: 1rem;
+    }
 
-<div style="background:#f8f9fa;padding:1rem;border-radius:8px;margin-top:1rem;">
-    <p><strong>What it does:</strong> Demo showcase for web development experiments and portfolio ideas.</p>
-</div>
+    .project-body {
+      font-size: 1rem;
+      color: #d0d0e8;
+    }
 
-</div>
+    .tech {
+      color: var(--accent);
+      font-weight: 500;
+    }
 
-# Quantization Benchmark: AWQ on RTX 5080
-**Metrics**: tokens/sec, VRAM usage, quality degradation  
-**Setup**: Llama.cpp | **Prompt**: Various models tested
-## Results
-__________________
-QWEN3.5
-Summary| Very capable model perfect for larger tasks and small projects
-Tool| llamaCPP
-prompt speed|
-t/s|
-VRAM usage| 99% max
-from| unsloth
-type| 9B GGUF
-__________________
-Nemotron3 Nano
-Summary| Blazing fast - pefect for rapid chats and time priority
-Tool| llamaCPP
-prompt speed| 941 // 7050 // 1061
-t/s| 196 // 204
-VRAM usage| 99% max
-from| nvidia
-type| 4B GGUF
-___________________
-### Key Findings
-- **2x speed increase** with 4-bit quantization
-- **52% VRAM reduction** (from 84GB to 38GB)
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.98rem;
+    }
+
+    th, td {
+      padding: 0.9rem 1.1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: rgba(0, 212, 255, 0.08);
+      color: var(--accent);
+    }
+
+    tr:hover {
+      background: rgba(0, 212, 255, 0.06);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.4rem;
+      background: var(--accent);
+      color: #0a0a15;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .cta:hover {
+      background: #00eaff;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin: 3rem 0 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+      padding: 2rem 0;
+      color: #707090;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 1.5rem 6vw; }
+      .project-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Projects</h1>
+    <p class="subtitle">Collection of hands-on work in AI, GPU optimization, automation, and web tools</p>
+  </header>
+
+  <div class="container">
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-title">
+          <i class="fas fa-coins"></i> ZWbank - Cryptocurrency Miners Manager
+          <span class="status">Public</span>
+        </div>
+        <div class="project-meta">
+          Forked from <a href="https://github.com/stefanwalther/speedy" target="_blank">stefanwalther/speedy</a> • 
+          <a href="https://github.com/ZombieWorm/SRBMiner-Multi" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-body">
+          <p><strong>What it does:</strong> CPU & AMD GPU cryptocurrency miner with test, track, and monitor capabilities.</p>
+          <p><strong>Tech Stack:</strong> <span class="tech">JavaScript</span>, Event tracking</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">
+          <i class="fas fa-tachometer-alt"></i> Speedy - Internet Speed Testing Tool
+          <span class="status">Public</span>
+        </div>
+        <div class="project-meta">
+          Forked from <a href="https://github.com/stefanwalther/speedy" target="_blank">stefanwalther/speedy</a> • 
+          <a href="https://github.com/ZombieWorm/speedy" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-body">
+          <p><strong>What it does:</strong> Test, track, monitor and analyze your internet speed with detailed metrics.</p>
+          <p><strong>Tech Stack:</strong> <span class="tech">JavaScript</span></p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">
+          <i class="fas fa-brain"></i> Local LLM Benchmark Suite
+          <span class="status">Active</span>
+        </div>
+        <div class="project-meta">
+          <a href="https://github.com/ZombieWorm/benchmarks" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-body">
+          <p><strong>What it does:</strong> Comprehensive benchmarking for AI models on consumer GPUs (RTX 5080, 4090, etc.)</p>
+          <p><strong>Tech Stack:</strong> <span class="tech">Python</span>, Llama.cpp, CUDA</p>
+          <a href="/benchmarks/" class="cta">View Benchmarks →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">
+          <i class="fas fa-code"></i> HTML Notebook & CSS Portfolio
+          <span class="status">Work in Progress</span>
+        </div>
+        <div class="project-body">
+          <p><strong>What it does:</strong> Demo showcase for web development experiments and portfolio ideas.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Quantization Benchmark: AWQ on RTX 5080</h2>
+    <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br>
+       <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Summary</th>
+          <th>Tool</th>
+          <th>Prompt speed</th>
+          <th>t/s</th>
+          <th>VRAM usage</th>
+          <th>Source</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>QWEN3.5</td>
+          <td>Very capable model perfect for larger tasks and small projects</td>
+          <td>llamaCPP</td>
+          <td>—</td>
+          <td>—</td>
+          <td>99% max</td>
+          <td>unsloth</td>
+          <td>9B GGUF</td>
+        </tr>
+        <tr>
+          <td>Nemotron3 Nano</td>
+          <td>Blazing fast — perfect for rapid chats and time priority</td>
+          <td>llamaCPP</td>
+          <td>941 // 7050 // 1061</td>
+          <td>196 // 204</td>
+          <td>99% max</td>
+          <td>nvidia</td>
+          <td>4B GGUF</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Key Findings</h3>
+    <ul>
+      <li><strong>2× speed increase</strong> with 4-bit quantization</li>
+      <li><strong>52% VRAM reduction</strong> (from 84GB to 38GB)</li>
+    </ul>
+
+  </div>
+
+  <footer>
+    <p>
+      <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
+    </p>
+  </footer>
+
+</body>
+</html>
