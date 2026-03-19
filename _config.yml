@@ -19,8 +19,8 @@ collections:
 show_drafts: false
 
 # Optional but recommended
-markdown: GFM
-highlighter: rouge
+markdown: none
+theme: null
 
 # Navigation (your theme may use this)
 nav:
