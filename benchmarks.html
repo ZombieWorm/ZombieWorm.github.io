@@ -1,46 +1,275 @@
----
-layout: default
-title: GPU Performance Benchmarks
-description: Comprehensive benchmarks for AI model deployment on consumer GPUs
-permalink: /benchmarks/
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GPU Performance Benchmarks • ZombieWorm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #0a0a15;
+      --text: #e0e0ff;
+      --accent: #00d4ff;
+      --card: #16162a;
+      --border: rgba(0, 212, 255, 0.12);
+      --highlight: rgba(0, 255, 100, 0.15);
+    }
 
-# GPU Performance Benchmarks
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<div style="max-width: 1200px; margin: 0 auto;">
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 5vw;
+    }
 
-{% include benchmark-card.html title="RTX 5080 - AWQ Quantization" slug="5080-feedback" preview="<p>Testing AWQ 4-bit quantization on RTX 5080 with Llama.cpp. Results show **2x speed increase** (18.2→41.7 tokens/s) with **52% VRAM reduction**.</p><table style='width:100%; border-collapse:collapse; margin-top:1rem;'>
-<tr style='background:#f8f9fa;text-align:left'><th>Method</th><th>VRAM (GB)</th><th>Tokens/s</th></tr>
-<tr><td>FP16</td><td>~84</td><td>18.2</td></tr>
-<tr style='background:#f0fff4'><td>AWQ-4bit</td><td>~38</td><td>41.7 ⚡</td></tr>
-</table>" %}
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-{% include benchmark-card.html title="Qwen 3.5 Model Performance" slug="qwen-analysis" preview="<p>Evaluating Qwen 3.5 for larger tasks and small projects using llama.cpp.</p><ul style='margin-top:1rem; line-height:2;'>
-<li>9B GGUF model tested</li>
-<li>Nemotron-3 Nano comparison: Blazing fast (705-1061 t/s)</li>
-<li>VRAM efficiency analysis pending</li>
-</ul>" %}
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
 
-</div>
+    .subtitle {
+      color: #a0a0d0;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-__________________
-QWEN3.5
-Summary| Very capable model perfect for larger tasks and small projects
-Tool| llamaCPP
-prompt speed|
-t/s|
-VRAM usage| 99% max
-from| unsloth
-type| 9B GGUF
-__________________
-Nemotron3 Nano
-Summary| Blazing fast - pefect for rapid chats and time priority
-Tool| llamaCPP
-prompt speed| 941 // 7050 // 1061
-t/s| 196 // 204
-VRAM usage| 99% max
-from| nvidia
-type| 4B GGUF
-___________________
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
+    .benchmark-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.8rem;
+      margin: 2.5rem 0;
+    }
 
+    .benchmark-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: all 0.25s ease;
+    }
+
+    .benchmark-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 212, 255, 0.4);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+
+    .card-title {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+
+    th, td {
+      padding: 0.9rem 1.1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: rgba(0, 212, 255, 0.08);
+      color: var(--accent);
+    }
+
+    tr.highlight {
+      background: var(--highlight);
+    }
+
+    tr:hover {
+      background: rgba(0, 212, 255, 0.06);
+    }
+
+    .emoji {
+      font-size: 1.4rem;
+    }
+
+    .section-title {
+      color: var(--accent);
+      font-size: 1.9rem;
+      margin: 3.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .model-comparison table {
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 0.7rem 1.4rem;
+      background: rgba(0, 212, 255, 0.15);
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .back-link:hover {
+      background: var(--accent);
+      color: #0a0a15;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+      padding: 2rem 0;
+      color: #707090;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 1.5rem 6vw; }
+      .benchmark-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GPU Performance Benchmarks</h1>
+    <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
+  </header>
+
+  <div class="container">
+
+    <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <div class="benchmark-grid">
+
+      <div class="benchmark-card">
+        <div class="card-title">
+          <i class="fas fa-bolt emoji"></i> RTX 5080 - AWQ Quantization
+        </div>
+        <p>Testing AWQ 4-bit quantization on RTX 5080 with llama.cpp. Results show <strong>2× speed increase</strong> (18.2 → 41.7 tokens/s) with <strong>52% VRAM reduction</strong>.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>VRAM (GB)</th>
+              <th>Tokens/s</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FP16</td>
+              <td>~84</td>
+              <td>18.2</td>
+            </tr>
+            <tr class="highlight">
+              <td>AWQ-4bit</td>
+              <td>~38</td>
+              <td>41.7 ⚡</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="benchmark-card">
+        <div class="card-title">
+          <i class="fas fa-brain emoji"></i> Qwen 3.5 Model Performance
+        </div>
+        <p>Evaluating Qwen 3.5 for larger tasks and small projects using llama.cpp.</p>
+        <ul style="margin-top:1rem; line-height:2; padding-left:1.5rem;">
+          <li>9B GGUF model tested</li>
+          <li>Nemotron-3 Nano comparison: Blazing fast (705–1061 t/s in some configs)</li>
+          <li>VRAM efficiency analysis pending</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Model Comparison Table</h2>
+
+    <div class="model-comparison">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Summary</th>
+            <th>Tool</th>
+            <th>Prompt Speed</th>
+            <th>Tokens/s</th>
+            <th>VRAM Usage</th>
+            <th>Source</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>QWEN3.5</td>
+            <td>Very capable model perfect for larger tasks and small projects</td>
+            <td>llamaCPP</td>
+            <td>—</td>
+            <td>—</td>
+            <td>99% max</td>
+            <td>unsloth</td>
+            <td>9B GGUF</td>
+          </tr>
+          <tr>
+            <td>Nemotron3 Nano</td>
+            <td>Blazing fast — perfect for rapid chats and time priority</td>
+            <td>llamaCPP</td>
+            <td>941 // 7050 // 1061</td>
+            <td>196 // 204</td>
+            <td>99% max</td>
+            <td>nvidia</td>
+            <td>4B GGUF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
+    </p>
+  </footer>
+
+</body>
+</html>
