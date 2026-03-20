@@ -22,3 +22,38 @@
   color: #4ec9b0;
   font-weight: 600;
 }
+/* HEADER */
+.site-header {
+  background: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.site-title a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.site-tagline {
+  color: #aaa;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 4rem;
+}
+
+.site-footer p {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+}
