@@ -1,0 +1,24 @@
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: #111;
+  border-bottom: 1px solid #333;
+  font-size: 1.1rem;
+}
+
+.main-nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a.active {
+  color: #4ec9b0;
+  font-weight: 600;
+}
