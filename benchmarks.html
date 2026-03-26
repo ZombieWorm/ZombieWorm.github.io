@@ -184,85 +184,62 @@
 
     <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
 
-    <div class="benchmark-grid">
-      <div class="benchmark-card">
-        <div class="card-title">
-          <i class="fas fa-bolt emoji"></i> RTX 5080 - AWQ Quantization
-        </div>
-        <p>Testing AWQ 4-bit quantization on RTX 5080 with llama.cpp. Results show <strong>2× speed increase</strong> (18.2 → 41.7 tokens/s) with <strong>52% VRAM reduction</strong>.</p>
-        
-        <table>
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>VRAM (GB)</th>
-              <th>Tokens/s</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>FP16</td>
-              <td>~84</td>
-              <td>18.2</td>
-            </tr>
-            <tr class="highlight">
-              <td>AWQ-4bit</td>
-              <td>~38</td>
-              <td>41.7 ⚡</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <h2 class="section-title">Model Comparison Table</h2>
-
-    <div class="model-comparison">
-      <table>
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Summary</th>
-            <th>Tool</th>
-            <th>Prompt Speed</th>
-            <th>Tokens/s</th>
-            <th>VRAM Usage</th>
-            <th>Source</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>QWEN3.5</td>
-            <td>Very capable model perfect for larger tasks and small projects</td>
-            <td>llamaCPP</td>
-            <td>—</td>
-            <td>—</td>
-            <td>99% max</td>
-            <td>unsloth</td>
-            <td>9B GGUF</td>
-          </tr>
-          <tr>
-            <td>Nemotron3 Nano</td>
-            <td>Blazing fast — perfect for rapid chats and time priority</td>
-            <td>llamaCPP</td>
-            <td>941 // 7050 // 1061</td>
-            <td>196 // 204</td>
-            <td>99% max</td>
-            <td>nvidia</td>
-            <td>4B GGUF</td>
-          </tr>
-        </tbody>
-      </table>
+    <h2 class="section-title">Quantised Models using an RTX 5080</h2>
+    <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br>
+       <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Summary</th>
+          <th>Tool</th>
+          <th>Prompt speed</th>
+          <th>t/s</th>
+          <th>VRAM usage</th>
+          <th>Source</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>QWEN3.5</td>
+          <td>Very capable model perfect for larger tasks and small projects</td>
+          <td>llamaCPP</td>
+          <td>—</td>
+          <td>—</td>
+          <td>99% max</td>
+          <td>unsloth</td>
+          <td>9B GGUF</td>
+        </tr>
+        <tr>
+          <td>Nemotron3 Nano</td>
+          <td>Blazing fast — perfect for rapid chats and time priority</td>
+          <td>llamaCPP</td>
+          <td>941 // 7050 // 1061</td>
+          <td>196 // 204</td>
+          <td>99% max</td>
+          <td>nvidia</td>
+          <td>4B GGUF</td>
+        </tr>
+                <tr>
+          <td>GPT OSS 20B</td>
+          <td>Great for projects and coding, still good at chat</td>
+          <td>llamaCPP</td>
+          <td>-</td>
+          <td>200</td>
+          <td>99% max</td>
+          <td>unsloth</td>
+          <td>3B Active GGUF</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </div>
-
   <footer>
     <p>
       <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
       <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
     </p>
   </footer>
-
 </body>
 </html>
