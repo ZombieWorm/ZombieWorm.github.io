@@ -212,18 +212,25 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <script>
-(function() {
+(async () => {
   const payload = {
     path: window.location.pathname,
     referrer: document.referrer || null,
     ts: Date.now()
   };
-
-  fetch("http://<YOUR_PI_IP>:9000/track", {
+  const token = "11ABP7HPQ0l599rzIpMHMY_PIK2nFLNuWOpJi9mjn52GbWHEvua07yZ2CLm3tMQn8cYRNNMR4DebBYElEF";
+  await fetch("https://api.github.com/repos/ZombieWorm/gitmon-analytics/issues", {
     method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
+    headers: {
+      "Accept": "application/vnd.github+json",
+      "Authorization": "Bearer " + token,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      title: `view: ${payload.path}`,
+      body: JSON.stringify(payload),
+      labels: ["pageview"]
+    })
   });
 })();
 </script>
