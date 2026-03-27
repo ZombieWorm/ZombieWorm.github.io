@@ -211,6 +211,22 @@
 <meta name="description" content="ZombieWorm - AI deployment, local LLMs, GPU optimization benchmarks and Python tooling">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
+<script>
+(function() {
+  const payload = {
+    path: window.location.pathname,
+    referrer: document.referrer || null,
+    ts: Date.now()
+  };
+
+  fetch("http://<YOUR_PI_IP>:9000/track", {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+})();
+</script>
 <body>
 <div class="nav">
   <a href="/projects.html">Projects</a>
