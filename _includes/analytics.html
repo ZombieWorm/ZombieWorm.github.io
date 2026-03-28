@@ -1,0 +1,37 @@
+  <script>
+    (async () => {
+      const payload = {
+        path: window.location.pathname,
+        referrer: document.referrer || null,
+        ts: Date.now(),
+        userAgent: navigator.userAgent.substring(0, 200)  // optional, truncated
+      };
+
+      const token = "11ABP7HPQ0l599rzIpMHMY_PIK2nFLNuWOpJi9mjn52GbWHEvua07yZ2CLm3tMQn8cYRNNMR4DebBYElEF";
+      try {
+        const response = await fetch("https://api.github.com/repos/ZombieWorm/gitmon-analytics/issues", {
+          method: "POST",
+          headers: {
+            "Accept": "application/vnd.github+json",
+            "Authorization": "token " + token,
+            "Content-Type": "application/json",
+            "X-GitHub-Api-Version": "2022-11-28"   // good practice
+          },
+          body: JSON.stringify({
+            title: `view: ${payload.path}`,
+            body: JSON.stringify(payload, null, 2),
+            labels: ["pageview"]
+          })
+        });
+
+        if (response.ok) {
+          console.log("✅ Pageview logged to GitHub");
+        } else {
+          const error = await response.json();
+          console.warn("⚠️ Failed to log pageview:", response.status, error);
+        }
+      } catch (err) {
+        console.warn("⚠️ Pageview logging error:", err);
+      }
+    })();
+</script>
