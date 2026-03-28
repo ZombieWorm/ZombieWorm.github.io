@@ -1,76 +1,105 @@
-.hero {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 1rem;
+/* Basic reset and mobile-first */
+* {
+    box-sizing: border-box;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-.accent {
-    color: #667eea;
-}
-
-.tagline {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+body {
+    font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #fff;
+    max-width: 100%;
 }
 
-.contact {
-    margin-top: 3rem;
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
+/* Container for content */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.main-nav {
-  display: flex;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  background: #111;
-  border-bottom: 1px solid #333;
-  font-size: 1.1rem;
+/* Header / Navigation */
+header {
+    background: #222;
+    color: white;
+    padding: 1rem 0;
 }
 
-.main-nav a {
-  color: #ddd;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;           /* Allows wrapping on very small screens */
+    gap: 1.5rem;
 }
 
-.main-nav a:hover {
-  color: #fff;
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
-.main-nav a.active {
-  color: #4ec9b0; /* Accent colour */
-  font-weight: 600;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* Main content */
+main {
+    padding: 2rem 0;
 }
 
-.nav {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 2rem;
+/* Make tables responsive */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    overflow-x: auto;           /* Helps on mobile */
+    display: block;
 }
 
-.nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+/* On mobile, make tables scroll horizontally if needed */
+@media (max-width: 640px) {
+    table {
+        font-size: 0.95rem;
+    }
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Headings and paragraphs */
+h1, h2, h3 {
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    nav ul {
+        flex-direction: column;     /* Stack nav links vertically on phones */
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 1.5rem 0;
+    }
 }
