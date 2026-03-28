@@ -6,12 +6,11 @@
     <title>{{ site.title | default: "ZombieWorm" }} | {{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-    <!-- NAVBAR (correct location) -->
+    <!-- NAVBAR -->
     <nav class="main-nav">
       <a href="/index.html">Home</a>
       <a href="/projects.html">Projects</a>
@@ -28,13 +27,15 @@
 
     <!-- Active link highlighter -->
     <script>
-      const path = window.location.pathname;
       document.querySelectorAll('.main-nav a').forEach(a => {
-        if (a.getAttribute('href') === path) {
+        if (a.getAttribute('href') === window.location.pathname) {
           a.classList.add('active');
         }
       });
     </script>
-{% include analytics.html %}
+
+    <!-- Analytics Tracking -->
+    {% include analytics.html %}
+
 </body>
 </html>
