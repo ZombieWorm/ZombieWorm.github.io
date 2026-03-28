@@ -1,4 +1,16 @@
 <script>
-  // Minimal visit capture for Pi analytics - safe for GitHub push protection
-  console.log("📊 Page visited:", window.location.pathname);
+  (async () => {
+    const visit = {
+      path: window.location.pathname,
+      referrer: document.referrer || "direct",
+      timestamp: new Date().toISOString()
+    };
+
+    const logLine = `[${visit.timestamp}] ${visit.path} | referrer: ${visit.referrer}\n`;
+
+    console.log("📊 Capturing visit:", visit.path);
+
+    // TODO: We'll add the append logic here once we have a working token strategy
+    // For now, just log to console
+  })();
 </script>
