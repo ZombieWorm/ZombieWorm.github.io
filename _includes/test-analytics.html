@@ -1,50 +1,33 @@
 <script>
-  console.log("🚀 GitHub Analytics script started - Path:", window.location.pathname);
+  console.log("🚀 GitHub Analytics started - Path:", window.location.pathname);
 
   (async () => {
-    const token = "5RcvuomK7XsHfG30lIzbgsYqQY7wWr3b8PzG";
+    const token = "5RcvuomK7XsHfG30lIzbgsYqQY7wWr3b8Pz";   // ← new classic token
 
-    // Try both common Authorization formats
-    const authMethods = [
-      `token ${token}`,
-      `Bearer ${token}`
-    ];
+    try {
+      const response = await fetch("https://api.github.com/repos/ZombieWorm/gitmon-analytics/issues", {
+        method: "POST",
+        headers: {
+          "Accept": "application/vnd.github+json",
+          "Authorization": `token ${token}`,   // Classic format
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2022-11-28"
+        },
+        body: JSON.stringify({
+          title: `test view: ${window.location.pathname} - ${new Date().toISOString().slice(0,19)}`,
+          body: "Test issue from browser script",
+          labels: ["pageview"]
+        })
+      });
 
-    for (let auth of authMethods) {
-      console.log(`🔄 Trying with: ${auth.substring(0, 20)}...`);
-
-      try {
-        const response = await fetch("https://api.github.com/repos/ZombieWorm/gitmon-analytics/issues", {
-          method: "POST",
-          headers: {
-            "Accept": "application/vnd.github+json",
-            "Authorization": auth,
-            "Content-Type": "application/json",
-            "X-GitHub-Api-Version": "2022-11-28"
-          },
-          body: JSON.stringify({
-            title: `view: ${window.location.pathname}`,
-            body: JSON.stringify({
-              path: window.location.pathname,
-              referrer: document.referrer || "direct",
-              ts: Date.now()
-            }, null, 2),
-            labels: ["pageview"]
-          })
-        });
-
-        if (response.ok) {
-          console.log("🎉 SUCCESS! Pageview issue created successfully");
-          return;   // Stop after first success
-        } else {
-          const errorData = await response.json().catch(() => ({}));
-          console.warn(`⚠️ Failed with status ${response.status}:`, errorData.message || errorData);
-        }
-      } catch (err) {
-        console.error(`❌ Error using ${auth.substring(0, 10)}...:`, err.message);
+      if (response.ok) {
+        console.log("🎉 SUCCESS! Issue created with classic token");
+      } else {
+        const err = await response.json().catch(() => ({}));
+        console.error(`❌ Failed (${response.status}):`, err.message || err);
       }
+    } catch (err) {
+      console.error("❌ Script error:", err.message);
     }
-
-    console.error("❌ All authorization attempts failed.");
   })();
 </script>
