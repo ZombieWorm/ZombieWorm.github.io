@@ -2,32 +2,32 @@
   console.log("🚀 GitHub Analytics started - Path:", window.location.pathname);
 
   (async () => {
-    const token = "5RcvuomK7XsHfG30lIzbgsYqQY7wWr3b8Pz";   // ← new classic token
+    const token = "11ABP7HPQ0FQ6NKUS8pKjg_j6Wera8xZUG5JGvLFjJTH0atrUrVhDwb7Z6lCFKgGVAMMKK3MAVb3pNVHwh";   // ← new fine-grained token
 
     try {
       const response = await fetch("https://api.github.com/repos/ZombieWorm/gitmon-analytics/issues", {
         method: "POST",
         headers: {
           "Accept": "application/vnd.github+json",
-          "Authorization": `token ${token}`,   // Classic format
+          "Authorization": `Bearer ${token}`,     // ← Important: using Bearer
           "Content-Type": "application/json",
           "X-GitHub-Api-Version": "2022-11-28"
         },
         body: JSON.stringify({
-          title: `test view: ${window.location.pathname} - ${new Date().toISOString().slice(0,19)}`,
-          body: "Test issue from browser script",
+          title: `test view: ${window.location.pathname}`,
+          body: "Simple test issue from browser script",
           labels: ["pageview"]
         })
       });
 
       if (response.ok) {
-        console.log("🎉 SUCCESS! Issue created with classic token");
+        console.log("🎉 SUCCESS! Issue created successfully");
       } else {
         const err = await response.json().catch(() => ({}));
         console.error(`❌ Failed (${response.status}):`, err.message || err);
       }
     } catch (err) {
-      console.error("❌ Script error:", err.message);
+      console.error("❌ Script/network error:", err.message);
     }
   })();
 </script>
