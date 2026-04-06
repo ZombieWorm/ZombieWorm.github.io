@@ -1,15 +1,23 @@
 ---
-layout: page # Make sure this matches your site's standard layout file name
+layout: page
 title: Performance Benchmarks
-permalink: /benchmarks.html # This ensures the URL remains the same
+permalink: /benchmarks.html
 ---
-<link rel="stylesheet" href="/assets/css/site.css">
-  <h2 class="section-title">Quantised Models using an RTX 5080</h2>
-  <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+
+<h2 class="section-title">Quantised Models using an RTX 5080</h2>
+
+<p>
+  <strong style="color: var(--text)">Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> 
+  <strong style="color: var(--text)">Setup</strong>: Llama.cpp | Various models tested
+</p>
   
-  <div class="model-comparison">
+<div class="model-comparison">
+  <!-- This wrapper allows the table to swipe left/right on mobile -->
+  <div class="table-wrapper">
     <table aria-describedby="statusTableCaption">
-      <caption id="statusTableCaption">Model Performance and Status Tracking</caption>
+      <caption id="statusTableCaption" style="color: var(--text-dim); font-size: 0.8rem; margin-bottom: 1rem;">
+        Model Performance and Status Tracking
+      </caption>
       <thead scope="colgroup">
         <tr role="row">
           <th scope="col">Model</th>
@@ -38,3 +46,4 @@ permalink: /benchmarks.html # This ensures the URL remains the same
       </tbody>
     </table>
   </div>
+</div>

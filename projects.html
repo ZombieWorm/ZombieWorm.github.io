@@ -2,205 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Detailed write-ups of real-world builds, from local LLM stacks to cross-platform automation and system tooling.">
-  <title>Technical Projects | Automation, Local AI & System Tooling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Projects | Automation, Local AI & System Tooling</title> 
+  <!-- Link to your single source of truth -->
   <link rel="stylesheet" href="/assets/css/site.css">
-  <style>
-    :root {
-      --bg: #0a0a15;
-      --text: #e0e0ff;
-      --accent: #00d4ff;
-      --card: #16162a;
-      --border: rgba(0, 212, 255, 0.12);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 2rem 5vw;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-
-    .subtitle {
-      color: #a0a0d0;
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.8rem;
-      margin: 2.5rem 0;
-    }
-
-    .project-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.6rem;
-      transition: all 0.25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(0, 212, 255, 0.4);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-    }
-
-    .project-title {
-      color: var(--accent);
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .status {
-      font-size: 0.9rem;
-      color: #88ffaa;
-      margin-left: auto;
-      background: rgba(136, 255, 170, 0.12);
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-    }
-
-    .project-meta {
-      font-size: 0.95rem;
-      color: #9090c0;
-      margin-bottom: 1rem;
-    }
-
-    .project-body {
-      font-size: 1rem;
-      color: #d0d0e8;
-    }
-
-    .tech {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.98rem;
-    }
-
-    th, td {
-      padding: 0.9rem 1.1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      background: rgba(0, 212, 255, 0.08);
-      color: var(--accent);
-    }
-
-    tr:hover {
-      background: rgba(0, 212, 255, 0.06);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.4rem;
-      background: var(--accent);
-      color: #0a0a15;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .cta:hover {
-      background: #00eaff;
-      transform: translateY(-2px);
-    }
-
-    .section-title {
-      color: var(--accent);
-      font-size: 1.8rem;
-      margin: 3rem 0 1.5rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 5rem;
-      padding: 2rem 0;
-      color: #707090;
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      body { padding: 1.5rem 6vw; }
-      .project-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-<meta name="description" content="ZombieWorm - AI deployment, local LLMs, GPU optimization benchmarks and Python tooling">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Detailed write-ups of real-world builds, from local LLM stacks to cross-platform automation and system tooling.">
 </head>
 <body>
-  <div class="nav">
-  <a href="/projects.html">Projects</a>
-  <a href="/benchmarks.html">Benchmarks</a>
-  <a href="/">Home</a>
-  <!-- or use /benchmarks/ if you prefer the shorter look -->
-  </div>
+  <!-- Corrected Class: main-nav -->
+  <nav class="main-nav">
+    <a href="/projects.html">Projects</a>
+    <a href="/benchmarks.html">Benchmarks</a>
+    <a href="/">Home</a>
+  </nav>
   <header>
     <h1>Projects</h1>
     <p class="subtitle">Collection of hands-on work in AI, GPU optimization, automation, and web tools</p>
   </header>
-  <div class="container">
+  <main class="container">
     <h2 class="section-title">Prototype working tools</h2>
-    <p><h4><u>Small business receipts:</u></h4>Digitisation of receipt information through images into text for processing into audit purposes for small business expenses. Tools: 
-      Python, camera, jig. Output into a csv file in json for grouping or date slicing.</p>
-    <p><h4><u>Heating oil prices:</u></h4>Script which fetches a website price tracker using html scraping which stores daily price to a local DB and pushes the price each day to my Phone from Home Assistant. Tools: 
-    Python, raspberry pi, home assistant device.</p>
-    <p><h4><u>Local LLM Model testing:</u></h4>Check out my benchmarks page to see what models I have tested with feedback.</p>
-    <p><h4><u>Local LLM Model gripes:</u></h4>Configure the local model to use internet search with an MCP component. I had: a misbehaving MCP client; a server that needed a signature refactor; a framework that silently cached old schemas and a UI that kept looping like a broken gramophone</p>
-   </div>
-  <footer>
+    <!-- Using the Grid and Card structure from your CSS -->
+    <div class="project-grid">
+            <!-- Card 1 -->
+      <div class="project-card">
+        <div class="project-title">Small business receipts</div>
+        <div class="project-body">
+          Digitisation of receipt information through images into text for processing into audit purposes for small business expenses.
+        </div>
+        <div class="project-meta">
+          Tools: <span class="tech">Python, Camera, Jig</span>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="project-card">
+        <div class="project-title">Heating oil prices</div>
+        <div class="project-body">
+          Script which fetches a website price tracker using HTML scraping, stores daily price to a local DB, and pushes to Phone via Home Assistant.
+        </div>
+        <div class="project-meta">
+          Tools: <span class="tech">Python, Raspberry Pi, Home Assistant</span>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="project-card">
+        <div class="project-title">Local LLM Model testing</div>
+        <div class="project-body">
+          Check out my benchmarks page to see what models I have tested with feedback.
+        </div>
+        <div class="project-meta">
+          Tools: <span class="tech">Local LLMs</span>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="project-card">
+        <div class="project-title">Local LLM Model gripes</div>
+        <div class="project-body">
+          Configuring local models to use internet search with an MCP component. Dealing with misbehaving clients, signature refactors, and schema caching.
+        </div>
+        <div class="project-meta">
+          Tools: <span class="tech">MCP, Python, LLMs</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <!-- Corrected Class: site-footer -->
+  <footer class="site-footer">
     <p>
-      <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
-      <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
+      <strong style="color: var(--text)">Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
+      <strong style="color: var(--text)">GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
     </p>
   </footer>
 </body>
