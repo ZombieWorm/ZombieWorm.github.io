@@ -3,7 +3,7 @@ layout: page # Make sure this matches your site's standard layout file name
 title: Performance Benchmarks
 permalink: /benchmarks.html # This ensures the URL remains the same
 ---
-
+<link rel="stylesheet" href="/assets/css/site.css">
   <h2 class="section-title">Quantised Models using an RTX 5080</h2>
   <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
   
