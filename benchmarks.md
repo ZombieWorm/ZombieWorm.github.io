@@ -38,10 +38,3 @@ permalink: /benchmarks.html # This ensures the URL remains the same
       </tbody>
     </table>
   </div>
-
-<footer class="site-footer">
-  <p>
-    <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
-    <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
-  </p>
-</footer>
