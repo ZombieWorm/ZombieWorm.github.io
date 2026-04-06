@@ -21,7 +21,7 @@
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: #707090;
   line-height: 1.6;
   padding: 2rem 5vw;
 }
@@ -29,7 +29,7 @@ body {
 /* ===========================
    NAVIGATION BAR
    =========================== */
-.nav {
+.main-nav {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 0;
@@ -37,13 +37,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.nav a {
+.main-nav a {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
 
-.nav a:hover {
+.main-nav a:hover {
   text-decoration: underline;
 }
 
