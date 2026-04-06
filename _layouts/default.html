@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title | default: "ZombieWorm" }} | {{ page.title }}</title>
-        <!-- 1. FIXED: Pointing to your actual theme file -->
-    <link rel="stylesheet" href="/assets/css/site.css">   
-    <!-- 2. Keep these only if you actually have these files in your assets folder -->
+    <title>{{ site.title | default: "ZombieWorm" }} | {{ page.title }}</title>    
+    <!-- Link to your single source of truth -->
+    <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
-<body class="site-body"> <!-- Added a class for easier targeting if needed -->
-    <!-- 3. THE GLOBAL NAVIGATION (Only lives here!) -->
+<body class="site-body">
+    <!-- GLOBAL NAVIGATION -->
     <nav class="main-nav">
       <a href="/index.html">Home</a>
       <a href="/projects.html">Projects</a>
       <a href="/benchmarks.html">Benchmarks</a>
     </nav>
-    <!-- 4. THE HEADER (Included from your snippets) -->
-    {% include header.html %}
-    <!-- 5. FIXED: Added the container class to prevent stretching -->
+    <!-- THE HEADER WAS REMOVED FROM HERE -->
+    <!-- MAIN CONTENT CONTAINER -->
     <main class="container">
         {{ content }}
     </main>
-    <!-- 6. THE FOOTER (Included from your snippets) -->
+    <!-- GLOBAL FOOTER -->
     {% include footer.html %}
-
     <!-- Active link highlighter -->
     <script>
       document.querySelectorAll('.main-nav a').forEach(a => {
