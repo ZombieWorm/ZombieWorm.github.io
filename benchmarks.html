@@ -1,188 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Transparent, repeatable benchmarks comparing model performance, system efficiency, and workflow optimizations.">
-  <title>Performance Benchmarks | Local LLMs & System Efficiency</title>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <style>
-    :root {
-      --bg: #0a0a15;
-      --text: #e0e0ff;
-      --accent: #00d4ff;
-      --card: #16162a;
-      --border: rgba(0, 212, 255, 0.12);
-      --highlight: rgba(0, 255, 100, 0.15);
-    }
+---
+layout: page # Make sure this matches your site's standard layout file name
+title: Performance Benchmarks
+permalink: /benchmarks.html # This ensures the URL remains the same
+---
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 2rem 5vw;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-
-    .subtitle {
-      color: #a0a0d0;
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .benchmark-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 1.8rem;
-      margin: 2.5rem 0;
-    }
-
-    .benchmark-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.8rem;
-      transition: all 0.25s ease;
-    }
-
-    .benchmark-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(0, 212, 255, 0.4);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-    }
-
-    .card-title {
-      color: var(--accent);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.98rem;
-    }
-
-    th, td {
-      padding: 0.9rem 1.1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      background: rgba(0, 212, 255, 0.08);
-      color: var(--accent);
-    }
-
-    tr.highlight {
-      background: var(--highlight);
-    }
-
-    tr:hover {
-      background: rgba(0, 212, 255, 0.06);
-    }
-
-    .emoji {
-      font-size: 1.4rem;
-    }
-
-    .section-title {
-      color: var(--accent);
-      font-size: 1.9rem;
-      margin: 3.5rem 0 1.5rem;
-      text-align: center;
-    }
-
-    .model-comparison table {
-      margin: 2rem auto;
-      max-width: 1000px;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin: 2rem 0;
-      padding: 0.7rem 1.4rem;
-      background: rgba(0, 212, 255, 0.15);
-      color: var(--accent);
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .back-link:hover {
-      background: var(--accent);
-      color: #0a0a15;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 5rem;
-      padding: 2rem 0;
-      color: #707090;
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      body { padding: 1.5rem 6vw; }
-      .benchmark-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-<meta name="description" content="ZombieWorm - AI deployment, local LLMs, GPU optimization benchmarks and Python tooling">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <div class="nav">
+<div class="nav">
   <a href="/projects.html">Projects</a>
   <a href="/benchmarks.html">Benchmarks</a>
   <a href="/">Home</a>
-  </div>
-  <header>
-    <h1>GPU Performance Benchmarks</h1>
-    <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
-  </header>
-  <div class="container">
-    <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
-    <h2 class="section-title">Quantised Models using an RTX 5080</h2>
-    <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+</div>
+
+<header>
+  <h1>GPU Performance Benchmarks</h1>
+  <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
+</header>
+
+<div class="container">
+  <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  
+  <h2 class="section-title">Quantised Models using an RTX 5080</h2>
+  <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+  
+  <div class="model-comparison">
     <table aria-describedby="statusTableCaption">
-      <caption>Model Performance and Status Tracking</caption>
+      <caption id="statusTableCaption">Model Performance and Status Tracking</caption>
       <thead scope="colgroup">
         <tr role="row">
           <th scope="col">Model</th>
@@ -196,16 +37,26 @@
         </tr>
       </thead>
       <tbody role="rowgroup">
-        <!-- THE TEMPLATE LOOP WOULD INSERT ROWS HERE -->
+        {% for item in site.data.model_statuses.models %}
+        <tr role="row">
+          <td role="cell">{{ item.model }}</td>
+          <td role="cell">{{ item.summary }}</td>
+          <td role="cell">{{ item.tool }}</td>
+          <td role="cell">{{ item.prompt_speed }}</td>
+          <td role="cell">{{ item.tokens_per_second }}</td>
+          <td role="cell">{{ item.vram_usage }}</td>
+          <td role="cell">{{ item.source }}</td>
+          <td role="cell">{{ item.type }}</td>
+        </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
-  </div>
-  <footer>
-    <p>
-      <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
-      <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
-    </p>
-  </footer>
-</body>
-</html>
+</div>
+
+<footer class="site-footer">
+  <p>
+    <strong>Email:</strong> <a href="mailto:quasintalg@gmail.com">quasintalg@gmail.com</a><br>
+    <strong>GitHub:</strong> <a href="https://github.com/ZombieWorm" target="_blank">@ZombieWorm</a>
+  </p>
+</footer>
