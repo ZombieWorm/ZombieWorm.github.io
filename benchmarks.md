@@ -4,14 +4,6 @@ title: Performance Benchmarks
 permalink: /benchmarks.html # This ensures the URL remains the same
 ---
 
-<header>
-  <h1>GPU Performance Benchmarks</h1>
-  <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
-</header>
-
-<div class="container">
-  <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
-  
   <h2 class="section-title">Quantised Models using an RTX 5080</h2>
   <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
   
@@ -46,7 +38,6 @@ permalink: /benchmarks.html # This ensures the URL remains the same
       </tbody>
     </table>
   </div>
-</div>
 
 <footer class="site-footer">
   <p>
