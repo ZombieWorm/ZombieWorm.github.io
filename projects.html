@@ -1,61 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technical Projects | Automation, Local AI & System Tooling</title> 
-  <!-- Link to your single source of truth -->
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="description" content="Detailed write-ups of real-world builds, from local LLM stacks to cross-platform automation and system tooling.">
-</head>
-<body>
-  <main class="container">
-    <h2 class="section-title">Prototype working tools</h2>
-    <!-- Using the Grid and Card structure from your CSS -->
-    <div class="project-grid">
-            <!-- Card 1 -->
-      <div class="project-card">
-        <div class="project-title">Small business receipts</div>
-        <div class="project-body">
-          Digitisation of receipt information through images into text for processing into audit purposes for small business expenses.
-        </div>
-        <div class="project-meta">
-          Tools: <span class="tech">Python, Camera, Jig</span>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="project-card">
-        <div class="project-title">Heating oil prices</div>
-        <div class="project-body">
-          Script which fetches a website price tracker using HTML scraping, stores daily price to a local DB, and pushes to Phone via Home Assistant.
-        </div>
-        <div class="project-meta">
-          Tools: <span class="tech">Python, Raspberry Pi, Home Assistant</span>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="project-card">
-        <div class="project-title">Local LLM Model testing</div>
-        <div class="project-body">
-          Check out my benchmarks page to see what models I have tested with feedback.
-        </div>
-        <div class="project-meta">
-          Tools: <span class="tech">Local LLMs</span>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="project-card">
-        <div class="project-title">Local LLM Model gripes</div>
-        <div class="project-body">
-          Configuring local models to use internet search with an MCP component. Dealing with misbehaving clients, signature refactors, and schema caching.
-        </div>
-        <div class="project-meta">
-          Tools: <span class="tech">MCP, Python, LLMs</span>
-        </div>
-      </div>
+---
+layout: default
+title: Projects
+---
 
+<header>
+  <h1>Projects</h1>
+  <p class="subtitle">Collection of hands-on work in AI, GPU optimization, automation, and web tools</p>
+</header>
+
+<main class="container">
+  <h2 class="section-title">Prototype working tools</h2>
+
+  <div class="project-grid">
+    <!-- Card 1 -->
+    <div class="project-card">
+      <div class="project-title">Small business receipts</div>
+      <div class="project-body">
+        Digitisation of receipt information through images into text for processing into audit purposes for small business expenses.
+      </div>
+      <div class="project-meta">
+        Tools: <span class="tech">Python, Camera, Jig</span>
+      </div>
     </div>
-  </main>
-</body>
-</html>
+
+    <!-- Card 2 -->
+    <div class="project-card">
+      <div class="project-title">Heating oil prices</div>
+      <div class="project-body">
+        Script which fetches a website price tracker using HTML scraping, stores daily price to a local DB, and pushes to Phone via Home Assistant.
+      </div>
+      <div class="project-meta">
+        Tools: <span class="tech">Python, Raspberry Pi, Home Assistant</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="project-card">
+      <div class="project-title">Local LLM Model testing</div>
+      <div class="project-body">
+        Check out my benchmarks page to see what models I have tested with feedback.
+      </div>
+      <div class="project-meta">
+        Tools: <span class="tech">Local LLMs</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="project-card">
+      <div class="project-title">Local LLM Model gripes</div>
+      <div class="project-body">
+        Configuring local models to use internet search with an MCP component. Dealing with misbehaving clients, signature refactors, and schema caching.
+      </div>
+      <div class="project-meta">
+        Tools: <span class="tech">MCP, Python, LLMs</span>
+      </div>
+    </div>
+  </div>
+</main>
+
