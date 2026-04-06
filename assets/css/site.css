@@ -206,16 +206,18 @@ tr:hover {
 }
 
 /* ===========================
-   FOOTER (FIXED)
+   FOOTER (FIXED WITH CLASS SELECTOR)
    =========================== */
-footer {
+.site-footer { /* <-- TARGETING THE SPECIFIC CLASS */
   text-align: center;
   margin-top: 5rem;
   padding: 2rem 0;
-  color: #707090 !important; /* Apply !important here too */
+  color: #707090 !important; /* Ensure text color is dark-mode appropriate */
   font-size: 0.95rem;
   border-top: 1px solid var(--border) !important;
+  background-color: var(--card) !important; /* !!! THIS IS THE KEY LINE !!! */
 }
+
 
 
 /* ===========================
