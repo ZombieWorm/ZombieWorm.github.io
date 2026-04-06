@@ -83,6 +83,24 @@ h1 {
 }
 
 /* ===========================
+   TABLE CONTAINER CENTERING (NEW/MODIFIED)
+   =========================== */
+.model-comparison {
+  /* 1. Constrain the maximum width for a balanced, readable look */
+  max-width: 1000px; 
+  
+  /* 2. Center the block horizontally within the main container */
+  margin: 2rem auto; /* 2rem top/bottom margin, auto horizontal centering */
+}
+
+/* Optional: If you want the table *itself* to be responsive within this block */
+.model-comparison table {
+  width: 100%; /* Keep the table 100% of its parent's width */
+  border-collapse: collapse;
+  margin: 0; /* Remove any extra margin the table might have */
+}
+
+/* ===========================
    PROJECT CARDS
    =========================== */
 .project-grid {
