@@ -4,12 +4,6 @@ title: Performance Benchmarks
 permalink: /benchmarks.html # This ensures the URL remains the same
 ---
 
-<div class="nav">
-  <a href="/projects.html">Projects</a>
-  <a href="/benchmarks.html">Benchmarks</a>
-  <a href="/">Home</a>
-</div>
-
 <header>
   <h1>GPU Performance Benchmarks</h1>
   <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
