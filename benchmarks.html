@@ -177,91 +177,29 @@
     <h1>GPU Performance Benchmarks</h1>
     <p class="subtitle">Comprehensive benchmarks for AI model deployment on consumer GPUs (RTX 50-series focus)</p>
   </header>
-
   <div class="container">
-
     <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
-
     <h2 class="section-title">Quantised Models using an RTX 5080</h2>
-    <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br>
-       <strong>Setup</strong>: Llama.cpp | Various models tested</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Model</th>
-          <th>Summary</th>
-          <th>Tool</th>
-          <th>Prompt speed</th>
-          <th>t/s</th>
-          <th>VRAM usage</th>
-          <th>Source</th>
-          <th>Type</th>
+    <p><strong>Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> <strong>Setup</strong>: Llama.cpp | Various models tested</p>
+    <table aria-describedby="statusTableCaption">
+      <caption>Model Performance and Status Tracking</caption>
+      <thead scope="colgroup">
+        <tr role="row">
+          <th scope="col">Model</th>
+          <th scope="col">Summary</th>
+          <th scope="col">Tool</th>
+          <th scope="col">Prompt speed</th>
+          <th scope="col">t/s</th>
+          <th scope="col">VRAM usage</th>
+          <th scope="col">Source</th>
+          <th scope="col">Type</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>QWEN3.5</td>
-          <td>Very capable model perfect for larger tasks and small projects</td>
-          <td>llamaCPP</td>
-          <td>—</td>
-          <td>—</td>
-          <td>99% max</td>
-          <td>unsloth</td>
-          <td>9B GGUF</td>
-        </tr>
-        <tr>
-          <td>Nemotron3 Nano</td>
-          <td>Blazing fast — perfect for rapid chats and time priority</td>
-          <td>llamaCPP</td>
-          <td>941 // 7050 // 1061</td>
-          <td>196 // 204</td>
-          <td>99% max</td>
-          <td>nvidia</td>
-          <td>2.9GB GGUF</td>
-        </tr>
-        <tr>
-          <td>GPT OSS 20B</td>
-          <td>Great for projects and coding, still good at chat</td>
-          <td>llamaCPP</td>
-          <td>-</td>
-          <td>200</td>
-          <td>99% max</td>
-          <td>unsloth</td>
-          <td>3B Active GGUF</td>
-        </tr>
-        <tr>
-          <td>Qwen3.5-9B-Distilled-Qwopus</td>
-          <td>Still testing.</td>
-          <td>llamaCPP</td>
-          <td>71</td>
-          <td>200</td>
-          <td>99% max</td>
-          <td>Jackrong</td>
-          <td>9.3GB GGUF</td>
-        </tr>
-        <tr>
-          <td>Gemma4-E4B-it-Q8</td>
-          <td>Smooth and fast, weaker than bigger models overall</td>
-          <td>llamaCPP</td>
-          <td>--</td>
-          <td>94</td>
-          <td>99% max</td>
-          <td>Unsloth</td>
-          <td>7.6GB GGUF</td>
-        </tr>
-        <tr>
-          <td>Gemma4-26B-A4B-iQ4</td>
-          <td>Chokes out of context real fast</td>
-          <td>llamaCPP</td>
-          <td>--</td>
-          <td>--</td>
-          <td>99% max</td>
-          <td>Unsloth</td>
-          <td>12.4GB GGUF</td>
-        </tr>
+      <tbody role="rowgroup">
+        <!-- THE TEMPLATE LOOP WOULD INSERT ROWS HERE -->
       </tbody>
     </table>
-    </div>
+  </div>
   </div>
   <footer>
     <p>
