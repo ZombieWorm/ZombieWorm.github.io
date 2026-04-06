@@ -10,7 +10,7 @@
 }
 
 /* ===========================
-   GLOBAL RESET + BODY
+   GLOBAL RESET + BODY (FIXED)
    =========================== */
 * {
   margin: 0;
@@ -20,11 +20,13 @@
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: var(--bg);
-  color: #707090;
+  /* !!! ADD !IMPORTANT HERE !!! */
+  background: var(--bg) !important; 
+  color: var(--text) !important;
   line-height: 1.6;
   padding: 2rem 5vw;
 }
+
 
 /* ===========================
    NAVIGATION BAR
@@ -204,16 +206,17 @@ tr:hover {
 }
 
 /* ===========================
-   FOOTER
+   FOOTER (FIXED)
    =========================== */
 footer {
   text-align: center;
   margin-top: 5rem;
   padding: 2rem 0;
-  color: #707090;
+  color: #707090 !important; /* Apply !important here too */
   font-size: 0.95rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border) !important;
 }
+
 
 /* ===========================
    LINKS
