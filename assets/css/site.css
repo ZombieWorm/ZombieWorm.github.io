@@ -76,6 +76,39 @@ h1 {
   font-size: 1.8rem;
   margin: 3rem 0 1.5rem;
 }
+/* ===========================
+   BENCHMARKS INTRO SECTION
+   =========================== */
+.benchmarks-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  margin-bottom: 3rem;
+  max-width: 100%;
+}
+
+.benchmarks-intro .section-title {
+  font-size: 2.6rem;
+  margin: 0 0 1.2rem 0;
+  color: #00ddff;           /* matches your cyan color in the screenshot */
+  font-weight: 700;
+}
+
+.benchmarks-intro p {
+  font-size: 1.15rem;
+  max-width: 720px;         /* prevents text from stretching too wide */
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* Optional: make it look even nicer on large screens */
+@media (min-width: 768px) {
+  .benchmarks-intro {
+    padding-top: 5rem;
+  }
+}
 
 /* ===========================
    LAYOUT CONTAINERS

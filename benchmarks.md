@@ -4,13 +4,15 @@ title: Performance Benchmarks
 permalink: /benchmarks.html
 ---
 
-<h2 class="section-title">Quantised Models using an RTX 5080</h2>
+<section class="benchmarks-intro">
+  <h2 class="section-title">Quantised Models using an RTX 5080</h2>
 
-<p>
-  <strong style="color: var(--text)">Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> 
-  <strong style="color: var(--text)">Setup</strong>: Llama.cpp | Various models tested
-</p>
-  
+  <p>
+    <strong style="color: var(--text)">Metrics</strong>: tokens/sec, VRAM usage, quality degradation<br> 
+    <strong style="color: var(--text)">Setup</strong>: Llama.cpp | Various models tested
+  </p>
+</section>
+ 
 <div class="model-comparison">
   <!-- This wrapper allows the table to swipe left/right on mobile -->
   <div class="table-wrapper">
