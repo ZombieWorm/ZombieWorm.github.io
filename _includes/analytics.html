@@ -1,4 +1,18 @@
 <script>
+<<<<<<< HEAD
+  // Simple page visit capture for Pi analytics
+  (function() {
+    const visit = {
+      path: window.location.pathname,
+      referrer: document.referrer || "direct",
+      ts: Date.now()
+    };
+
+    console.log("📊 Visit captured:", visit.path);
+    
+    // You can expand this later if needed
+  })();
+=======
   (async () => {
     const visit = {
       path: window.location.pathname,
@@ -13,4 +27,5 @@
     // TODO: We'll add the append logic here once we have a working token strategy
     // For now, just log to console
   })();
+>>>>>>> c8683e257df2c801774668dc098a885501df981b
 </script>
