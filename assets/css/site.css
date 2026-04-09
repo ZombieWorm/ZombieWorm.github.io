@@ -33,6 +33,7 @@ body {
    =========================== */
 .main-nav {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
