@@ -56,7 +56,7 @@ models:
     type: "12.4GB GGUF"
 
   - model: "Gemma4-26B-A4B-iQ3-XSS"
-    summary: "Chokes out of context real fast"
+    summary: "After web search fix and cpp updates this model flies. It completes most tasks well with a long context pool."
     tool: "llamaCPP"
     prompt_speed: "92"
     tokens_per_second: "124 t/s"
